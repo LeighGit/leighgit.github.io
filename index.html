@@ -8,18 +8,7 @@
 <script type="text/javascript" language="JavaScript1.1">
   
 navigator.serviceWorker.register('TNotifyService.js');
-	
-var pusher = new Pusher('682c10e9ae1e3633aa51', {
-	  //cluster: 'eu',
-      encrypted: true,
-	  authEndpoint: 'auth.php'
-    });
-
-    var channel = pusher.subscribe('private-test_channel');
-    channel.bind('client-my_event', function(data) {
-      alert(data.message);
-    });
-  
+	 
 function Notify(){
 	setTimeout(showNotification, 5000);
 }
@@ -50,8 +39,6 @@ function showNotification() {
   
   <p><button onclick="Notify()">Notify me after 5 sec!</button></p>
   
- <p>Pusher incl...<p>
-
 
 </body>
 </html>
