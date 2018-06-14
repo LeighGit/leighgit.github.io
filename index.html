@@ -5,7 +5,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" language="JavaScript1.1">
+  
 navigator.serviceWorker.register('TNotifyService.js');
+  
+function Notify(){
+	setTimeout(showNotification, 5000);
+}
+  
 function showNotification() {
   Notification.requestPermission(function(result) {
     if (result === 'granted') {
@@ -30,7 +36,7 @@ function showNotification() {
   
   <p><img src="Images/n.jpg"></p>
   
-  <p><button onclick="showNotification()">Notify me!</button></p>
+  <p><button onclick="Notify()">Notify me!</button></p>
   
 
 
