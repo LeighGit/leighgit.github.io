@@ -4,9 +4,21 @@
 <title>Notify</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://js.pusher.com/3.2/pusher.min.js"></script>
 <script type="text/javascript" language="JavaScript1.1">
   
 navigator.serviceWorker.register('TNotifyService.js');
+	
+var pusher = new Pusher('682c10e9ae1e3633aa51', {
+	  //cluster: 'eu',
+      encrypted: true,
+	  authEndpoint: 'auth.php'
+    });
+
+    var channel = pusher.subscribe('private-test_channel');
+    channel.bind('client-my_event', function(data) {
+      alert(data.message);
+    });
   
 function Notify(){
 	setTimeout(showNotification, 5000);
