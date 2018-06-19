@@ -17,10 +17,10 @@
 function JS_Fire(){
 
 	var key = 'AAAAI2B-JFc:APA91bG7VdL15ES1DJZvvdxpZOJQrRvfJQv1NcyKSljKUdaSGyAbQtDt6vbMw1Gbe2C_e0kAm9Jf97rblYENnihsnN_ZV-uvmewnW9OyXvFnvqfHVBL5LCl93DerKtq_LqbM0NbH_ZUm';
-	var to = 'd8ZAtBQNWDg:APA91bEmeCamlFPNrpvZxCouCQnpjPku4Q2wAkFyyRk6DM-XU9R5s7PpOygJnETMiX-JY5Qb-BITUL6B5Az9v4W26R_FjDWLx_bRf4RjxNs7lYbU2tSoWXB3HmWOhHcCmhMNEhgmiLw4Dj1tP8uUxsQWgRIkfiPE1w';
+	var to = document.getElementById('textfieldToken').value;
 	var notification = {
 	  'title': document.getElementById('textfieldTitle').value,
-	  'body': document.getElementById('textfieldBody'.value),
+	  'body': document.getElementById('textfieldBody').value,
 	  'icon': 'firebase-logo.png',
 	  'click_action': 'http://localhost:8081'
 	};
@@ -48,7 +48,7 @@ function JS_Fire(){
 <table width="500" cellpadding="3">
   <tr> 
     <td width="82">ID Token:</td>
-    <td width="398"><input name="textfieldToke" type="text" class="txtfields" id="textfieldToke"></td>
+    <td width="398"><input name="textfieldToken" type="text" class="txtfields" id="textfieldToken"></td>
   </tr>
   <tr> 
     <td>&nbsp;</td>
