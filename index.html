@@ -180,7 +180,7 @@ limitations under the License.
     if (!isTokenSentToServer()) {
       console.log('Sending token to server...');
       // TODO(developer): Send the current token to your server.
-      document.getElementById('divLeigh').innderHTML = '<a href="http://iot.netinfo.co.za/Firebase/ID.php?id=' + currentToken + '" target="_blank">Send ID</a>'
+      document.getElementById('divLeigh').innerHTML = '<a href="http://iot.netinfo.co.za/Firebase/ID.php?id=' + currentToken + '" target="_blank">Send ID</a>';
       setTokenSentToServer(true);
     } else {
       console.log('Token already sent to server so won\'t send it again ' +
