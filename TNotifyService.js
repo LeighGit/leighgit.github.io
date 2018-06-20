@@ -1,12 +1,10 @@
-messaging.setBackgroundMessageHandler(function(payload) {
-  console.log('[firebase-messaging-sw.js] Received background message ', payload);
-  // Customize notification here
-  var notificationTitle = 'Background Message Title';
-  var notificationOptions = {
-    body: 'Background Message body.',
-    icon: '/firebase-logo.png'
-  };
-
-  return self.registration.showNotification(notificationTitle,
-    notificationOptions);
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open('v1').then(function(cache) {
+		console.log('Install Success');
+      /*return cache.addAll([
+        '/Netinfo/Iot/Poll/TNotifySound.wav'
+      ]);*/
+    })
+  );
 });
