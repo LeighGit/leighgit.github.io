@@ -7,40 +7,11 @@ importScripts('https://www.gstatic.com/firebasejs/5.0.4/firebase.js');
 
 // Initialize Firebase
 	var config = {
-	apiKey: "AIzaSyB06h3WuxBPDDtgYpxPaOTJoE7JAt9n1Ak",
-	authDomain: "testiot-fae8e.firebaseapp.com",
-	databaseURL: "https://testiot-fae8e.firebaseio.com",
-	projectId: "testiot-fae8e",
-	storageBucket: "testiot-fae8e.appspot.com",
-	messagingSenderId: "151942734935"
+		messagingSenderId: "151942734935"
 	};
 	firebase.initializeApp(config);
 
 var messaging = firebase.messaging();
-
-/**
- * Here is is the code snippet to initialize Firebase Messaging in the Service
- * Worker when your app is not hosted on Firebase Hosting.
-
- // [START initialize_firebase_in_sw]
- // Give the service worker access to Firebase Messaging.
- // Note that you can only use Firebase Messaging here, other Firebase libraries
- // are not available in the service worker.
- importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js');
- importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
-
- // Initialize the Firebase app in the service worker by passing in the
- // messagingSenderId.
- firebase.initializeApp({
-   'messagingSenderId': 'YOUR-SENDER-ID'
- });
-
- // Retrieve an instance of Firebase Messaging so that it can handle background
- // messages.
- const messaging = firebase.messaging();
- // [END initialize_firebase_in_sw]
- **/
-
 
 // If you would like to customize notifications that are received in the
 // background (Web app is closed or not in browser focus) then you should
